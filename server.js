@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 3000;
 const oauth2Client = new google.auth.OAuth2(
   process.env.GMAIL_CLIENT_ID,
   process.env.GMAIL_CLIENT_SECRET,
-  'http://localhost:3000/oauth2callback'
+  'https://campign-launcing.onrender.com/oauth2callback'
 );
 
 // Attach refresh token if already present
@@ -228,7 +228,7 @@ app.get('/', (req, res) => {
 -------------------------------------------------- */
 
 app.listen(PORT, () => {
-  console.log(`🚀 Server running at http://localhost:${PORT}`);
+  console.log(`🚀 Server running at https://campign-launcing.onrender.com`);
   if (!process.env.GMAIL_REFRESH_TOKEN) {
     console.log('⚠️  Visit /auth/google to generate refresh token');
   }
