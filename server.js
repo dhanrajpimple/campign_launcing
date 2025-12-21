@@ -1,9 +1,22 @@
 const express = require('express');
 const { google } = require('googleapis');
+const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+
+app.use(cors({
+  origin: [
+    '*',
+  ],
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type', 'Authorization']
+}));
+
+// handle preflight explicitly
+app.options('*', cors());
 
 /* --------------------------------------------------
    1. OAuth2 Client (Desktop client + localhost redirect)
