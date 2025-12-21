@@ -1,0 +1,27 @@
+{
+  "name": "email-campaign-backend",
+  "version": "1.0.0",
+  "description": "Email campaign backend with Gmail API OAuth 2.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "keywords": [
+    "email",
+    "gmail",
+    "oauth2",
+    "campaign"
+  ],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "googleapis": "^128.0.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
