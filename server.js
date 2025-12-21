@@ -8,10 +8,8 @@ const PORT = process.env.PORT || 3000;
 
 
 app.use(cors({
-  origin: [
-    '*',
-  ],
-  methods: ['GET', 'POST', 'OPTIONS'],
+  origin: '*',
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
